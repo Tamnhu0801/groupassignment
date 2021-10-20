@@ -1,0 +1,227 @@
+@media only screen (min-width: 1100px) {
+}
+/* Tablet (Portrait) */
+/* Width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+/* Menu section */
+#page_wrap, nav{
+	width:708px;
+}
+/* container section */
+.container{
+	display:block;
+}
+/* Isotope section */
+.element {
+	width:297px;
+	min-height:318px;
+	}
+/* Header panel section */
+#panel .content{
+	width:700px;
+	padding:10px;
+}
+.tab ul.login {
+	right:200px;
+}
+.content{
+	width:690px!important;
+}
+}
+/* Mobile potrait width 320 */
+@media only screen and (max-width: 767px) {
+/* Main container section */
+#page_wrap, .header_wrap{
+	width:280px;
+}
+#page_wrap{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+h1{
+font-size:18px;
+
+}
+/* logo section */
+.logo_row h1{
+	font-size:100px;
+	line-height:60px;
+	margin-top:50px;
+}
+/* container section */
+.container{
+	display:block;
+}
+.line_middle2{
+	left:38%;
+}
+/* Footer section */
+.phone h1{
+	font-size:36px;
+}
+.welcome_cafe h3{
+	font-size:14px;
+}
+/* Isotope section */
+.element {
+	width:221px;
+	min-height:295px;
+}
+
+.jqueryslidemenu ul{
+	display:list-item;
+}
+#options{
+	text-align:center;
+}
+#options ul{
+	display:inline-block;
+	height:158px;
+	margin:0 auto;
+	margin:0px 0px;
+	padding:0px;
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:20px;
+}
+#options a:hover{
+	height:50px;
+}
+#options ul li{
+	display:table;
+	text-align:center;
+	margin-bottom:3px;
+	background-color:#f3f1f2;
+	width:225px;
+	border-right:none;
+}
+#options ul li a{
+	border-right:none;
+	text-align:center!important;
+	margin:0 auto;
+	float:none!important;
+}
+h3.post_title{
+	font-size:17px;
+}
+.post .one_half, .post .one_half_last{
+margin-bottom:10px;
+
+}
+/* Header panel section */
+.tab ul.login {
+	right:0px;
+}
+#panel .content{
+	width:250px;
+	padding:10px;
+}
+#panel h2{
+	font-size:12px!important;
+	line-height:16px;
+}
+/* Comment page  */
+.received_title h1{
+	font-size:19px;
+}
+.share .one_half{
+	margin-bottom:0px;
+}
+/* Contact page  */
+.contact_form .one_third, .one_third_last{
+	margin-bottom:0px!important;
+}
+.comment_form, .one_third, .one_third_last{
+	margin-bottom:0px!important;
+	
+}
+#contact-form input{
+	width:96%;
+}
+/* Bx slider  */
+.bxslider h4{
+	font-size:12px;
+}
+span.amount{
+	font-size:12px;
+}
+
+/* Jqueryslidemenu
+----------------------------------------------------------------------------------------------------*/
+nav{
+	float:none;
+}
+.jqueryslidemenu ul {
+	display:none;
+	padding-left:10px;
+}
+.jqueryslidemenu {
+	display:block;
+	float:none;
+	width:100%;
+	text-align:center;
+	padding:1px 0px 1px 0px;
+	border-radius:0px;
+}
+.jqueryslidemenu select {
+	display:block;
+	width:80%;
+	margin:0px auto;
+}
+.jqueryslidemenu select option {
+	padding:2px 4px;
+}
+span.blog_elements span{
+	display:block;
+	padding-bottom:15px;
+	margin-left:5px!important;
+	overflow:hidden;
+}
+/* Columns
+----------------------------------------------------------------------------------------------------*/
+.one_half, .one_half_last, .one_third, .one_third_last, .two_third, .two_third_last, .one_fourth, .one_fourth_last, .two_fourth, .two_fourth_last, .three_fourth, .three_fourth_last, .one_fifth, .one_fifth_last, .two_fifth, .two_fifth_last, .three_fifth, .three_fifth_last, .four_fifth, .four_fifth_last, #pricing_table .one_third, #pricing_table .one_fourth {
+	 width: 100%;
+	 margin-bottom:30px;
+}
+}
+/* Mobile landscape width 480 */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+/* Main container section */
+#page_wrap{
+	width:440px;
+}
+.container{
+	display:block;
+}
+.staff img{
+	text-align:center;
+	margin-left:60px;
+}
+/* Isotope section */
+.element{
+	width:380px;
+}
+#nav ul li{
+	display:table;
+	text-align:center;
+	margin-bottom:3px;
+	background-color:#f3f1f2;
+	width:385px;
+}
+/* Header panel section */
+#panel .content{
+	width:430px;
+	padding:10px;
+}
+.tab ul.login {
+	right:80px;
+}
+/* Contact page  */
+.contact_form .one_third .one_third_last{
+	margin-bottom:0px!important;
+}
+#contact-form input{
+	width:98%;
+}
+}

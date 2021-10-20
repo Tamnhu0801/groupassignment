@@ -1,0 +1,110 @@
+body{
+	background-image: url(images/bg_01.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.to {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: minmax(100px,auto);
+}
+
+.team {
+    border: 1px solid #80808000;
+    grid-column: 6/9;
+    grid-row: 3;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px 0px grey;
+    background-color:#FFDCDC;
+}
+
+#menu ul{
+	margin: 5px;
+	padding: 0;
+}
+
+#menu ul li{
+ 
+    margin: 5px;;
+ 
+    padding:0;
+ 
+    text-align:center;
+ 
+    display:inline;    }
+ 
+    #menu li a{
+ 
+    font: size 30px;
+ 
+    font-weight:bold;
+ 
+    color:white;
+ 
+    padding: 0 60px;
+ 
+    border-right:1px solid white;
+ 
+    text-decoration:none;
+ 
+    }
+ 
+    #menu ul li:hover{background: #FFB4B4;}
+
+    #avatar {
+        /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+        background-image: url(images/ava_1.jpg);
+        
+        /* make a square container */
+        width: 150px;
+        height: 150px;
+    
+        /* fill the container, preserving aspect ratio, and cropping to fit */
+        background-size: cover;
+    
+        /* center the image vertically and horizontally */
+        background-position: top center;
+    
+        /* round the edges to a circle with border radius 1/2 container size */
+        border-radius: 50%;
+        position: relative;
+        margin: auto;
+    }
+    .info{
+        left: auto;
+        width: 900px;
+    }
+
+    .ava {
+        display: block;
+        float: left;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+    h2{
+        color: #FFB4B4;
+        font-size: 30px;
+    }
+    h3{
+        color: #FFB4B4;
+        font-size: 25px;
+    }
+    h4{
+        margin: 10px;
+        font-size: 20px;
+        color: #FFDCDC;
+    }
+
+    .box {
+        height: 340px;
+        width: 900px;
+        background-color: white;
+        margin: 10px;
+    }

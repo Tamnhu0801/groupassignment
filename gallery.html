@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+<title>Cafe HTML5 Responsive Template</title>
+<link href="css/jqueryslidemenu.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css"/>
+<link href="css/isotope.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="js/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet" type="text/css" media="screen" />
+<link href='http://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript"></script>
+<script src="js/jquery.easing.js" type="text/javascript"></script>
+<script src="js/jqueryslidemenu.js" type="text/javascript"></script>
+<script src="js/isotope.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<script type="text/javascript">
+$(document).ready(function(){
+var $container = $('#isotope_content_wrapper');
+$container.isotope({
+	filter: '*',
+	animationOptions: {
+     duration: 750,
+     easing: 'linear',
+     queue: false,
+   }
+});
+
+$('#nav a').click(function(){
+  var selector = $(this).attr('data-filter');
+    $container.isotope({ 
+	filter: selector,
+	animationOptions: {
+     duration: 750,
+     easing: 'linear',
+     queue: false,
+	 
+   }
+  });
+  return false;
+});
+// Lightbox Hover effect	
+		// Lightbox Hover effect			
+				$(".element img").hover(function() {
+				   $(this).stop().animate({ opacity: .5 });
+				},function() {
+				   $(this).stop().animate({ opacity: 1 });
+				});
+			
+			
+		// Lightbox Function effect		
+			jQuery("a.example6").fancybox({
+				'titlePosition'		: 'inside',
+				'overlayColor'		: '#000',
+				'overlayOpacity'	: 0.9
+			});	
+
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+var $container = $('#container');
+
+  $container.isotope({
+	itemSelector : '.element'
+  });
+  
+  
+  var $optionSets = $('#options .option-set'),
+	  $optionLinks = $optionSets.find('a');
+
+  $optionLinks.click(function(){
+	var $this = $(this);
+	// don't proceed if already selected
+	if ( $this.hasClass('selected') ) {
+	  return false;
+	}
+	var $optionSet = $this.parents('.option-set');
+	$optionSet.find('.selected').removeClass('selected');
+	$this.addClass('selected');
+
+	// make option object dynamically, i.e. { filter: '.my-filter-class' }
+	var options = {},
+		key = $optionSet.attr('data-option-key'),
+		value = $this.attr('data-option-value');
+	// parse 'false' as false boolean
+	value = value === 'false' ? false : value;
+	options[ key ] = value;
+	if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+	  // changes in layout modes need extra logic
+	  changeLayoutMode( $this, options )
+	} else {
+	  // otherwise, apply new options
+	  $container.isotope( options );
+	}
+	
+	return false;
+  });
+// filter items when filter link is clicked
+$('#filters a').click(function(){
+  var selector = $(this).attr('data-filter');
+  $container.isotope({ filter: selector });
+  return false;	
+});
+
+
+});
+</script>	
+</head>
+<body>
+<section id="page_wrap">
+<!-- header section --> 
+<header>
+    <div class="header_design">
+    	<div class="find_now">
+        <!-- Panel -->
+            <div id="toppanel">
+                <div id="panel">
+                    <div class="content clearfix">
+                         <div class="one_third">
+                        	<h3> Phasellus in nunc purus.</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nunc purus. Fusce vitae nisi at turpis interdum mattis...!</p>
+                        </div>
+                        <div class="one_third">
+                        	<h3> Praesent lacinia iaculis.</h3>
+                            <p>Phasellus tempor feugiat nulla, eu dictum sapien volutpat id. Donec commodo placerat ligula, non pharetra felis euismod eget...!</p>
+                        </div>
+                        <div class="one_third_last">
+                        	<h3> Nulla bibendum.</h3>
+                            <p>Nulla bibendum mauris vel leo laoreet bibendum. Praesent lacinia iaculis magna eget viverra. Praesent hendrerit massa lectus...!</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- The tab on button -->		
+                    <div class="tab">
+                    <ul class="tab_btn">
+                        <li id="toggle">
+                            <a id="open" class="open" href="#"></a>
+                            <a id="close" style="display: none;" class="close" href="#"></a>			
+                        </li>
+                    </ul> 
+                    </div> 
+                    <!-- End The tab on button -->
+            </div> 
+         <!--End panel -->
+        </div>
+        <div class="logo_row">
+             <h1><a href="index.html">Cafe</a></h1>
+            <h3>Small cafe</h3>
+        </div>
+       
+            <nav id="myslidemenu" class="jqueryslidemenu clearfix">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="menu.html">Menu</a>
+                    <ul>
+                        <li><a href="about_us.html">About us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact_us.html">Contacts</a></li>
+                    </ul>
+                    </li>
+                    <li><a class="active" href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact_us.html">Contacts</a></li>
+                </ul>
+			</nav>
+         
+    </div>
+</header>
+<!-- container section -->
+<section class="container">
+	<h1>GALLERY</h1>
+       
+    
+	<div id="options" class="clearfix">
+            <ul id="filters" class="option-set clearfix" data-option-key="filter">
+                <li><a href="#" data-option-value="*" class="selected">All</a></li>
+                <li><a href="#filter" data-option-value=".Soups">Soups </a></li>
+                <li><a href="#filter" data-option-value=".Salads">Salads </a></li>
+                <li><a href="#filter" data-option-value=".Beverages">Beverages</a></li>
+            </ul>
+        </div>
+        
+        <!-- navigation section -->        
+      <div id="container" class="clearfix">
+            <div class="element portfolio_item Soups">
+            	
+                <a href="images/gallery_img_01.jpg" class="example6" title="Tempor imperdiet quam vehicula sed."> 
+               
+                <img src="images/gallery_img_01.jpg" alt="" /> </a>
+                <h4>Soups <span class="amount">......... $ 12</span></h4> 
+                <p>Nullam fermentum diam nec dui vestibulum malesuada. Sed bibendum suscipit.</p>
+            </div>
+            <div class="element Beverages viewport ">
+                <a href="images/gallery_img_02.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_02.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Beverages<span class="amount"> ......... $ 15</span></h4>
+                <p>Nunc a vestibulum nulla. Integer ultrices dignissim nibh, sed commodo magna .</p> 
+            </div>
+            <div class="element Salads ">
+                <a href="images/gallery_img_03.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_03.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Salads<span class="amount"> ......... $ 17</span></h4> 
+                <p>Integer porttitor scelerisque urna, at suscipit ipsum Tempor imperdiet quam vehicula sed.</p>
+            </div>
+            <div class="element Beverages">
+                <a href="images/gallery_img_04.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_04.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Beverages<span class="amount"> ......... $ 09</span></h4>
+                <p>Praesent hendrerit ullamcorper sem, tempor imperdiet quam vehicula sed.</p> 
+            </div>
+            <div class="element Salads ">
+                <a href="images/gallery_img_05.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_05.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Salads<span class="amount"> ......... $ 20</span></h4>
+                <p>Suspendisse risus justo, suscipit nec mattis vel, pulvinar sed tortor.</p> 
+            </div>
+            <div class="element Soups ">
+                <a href="images/gallery_img_06.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_06.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Soups<span class="amount"> ......... $ 26</span></h4> 
+                <p> Cras quam ligula, mattis in laoreet vitae, adipiscing non dolor. </p>
+            </div>
+            <div class="element Salads ">
+                <a href="images/gallery_img_07.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_07.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Salads<span class="amount"> ......... $ 29</span></h4> 
+                <p>Vestibulum accumsan fermentum dolor, eu ultrices enim placerat faucibus.</p>
+            </div>
+            <div class="element Beverages ">
+                <a href="images/gallery_img_08.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_08.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Beverages<span class="amount"> ......... $ 33</span></h4> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in nunc purus.</p>
+            </div>
+            <div class="element Soups ">
+                <a href="images/gallery_img_09.jpg" class="example6" title="Tempor imperdiet quam vehicula sed.">
+                <img src="images/gallery_img_09.jpg" alt="Northern Saw-Whet Owl" /></a>
+                <h4>Soups<span class="amount"> ......... $ 24</span></h4> 
+                <p>Integer ultrices dignissim nibh, sed commodo magna varius ut.</p>
+            </div>
+        </div>
+
+</section>
+<!-- footer section -->
+<footer>
+    <div class="footer_design">
+        <ul class="social_icons">
+            <li><a href="#"><img src="images/rss_icon.png" alt=""/></a></li>
+            <li><a href="#"><img src="images/twitter_icon.png" alt=""/></a></li>
+            <li><a href="#"><img src="images/tumblr_icon.png" alt=""/></a></li>
+            <li><a href="#"><img src="images/dribbble_icon.png" alt=""/></a></li>
+            <li><a href="#"><img src="images/facebook_icon.png" alt=""/></a></li>
+        </ul>
+        <div class="phone">
+            <h1>040-6935248</h1>
+            <h3>RESERVATIONS</h3>
+            <h5><a href="#">Cafe &copy; Privacy Policy</a></h5>
+        </div>
+        
+    </div> 
+</footer>      
+</section>
+</body>
+</html>
